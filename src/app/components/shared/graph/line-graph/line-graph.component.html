@@ -1,0 +1,28 @@
+<div class="line-graph">
+  <div class="row upper-div" style="margin-top: 5px">
+    <div class="{{(screenWidth <= 761) ? 'col-12' : 'col-3'}} ">
+      <button class=" btn btn-warning btn-sm"  (click)="hideOne()">Hide/Active</button>
+    </div>
+<!--    <div class="{{(screenWidth <= 761) ? '' : 'col-9'}}  rang-information">-->
+<!--      <button style="background-color: green" class="btn btn-success btn-sm info">{{'Button.SP-Range' | translate}} </button>-->
+<!--      <button style="background-color: #43A047; border-color: #43A047" class="btn btn-success btn-sm info">{{'Button.WP-Range' | translate}}</button>-->
+<!--      <button [disabled]="true" class="btn btn-warning btn-sm info">{{'Button.NU-Range' | translate}}</button>-->
+<!--      <button style="background-color: #F44336; border-color: #F44336" class="btn btn-danger btn-sm info">{{'Button.WN-Range' | translate}}</button>-->
+<!--      <button style="background-color: #D32F2F; border-color: #D32F2F" class="btn btn-danger btn-sm info">{{'Button.SN-Range' | translate}}</button>-->
+<!--    </div>-->
+  </div>
+
+  <canvas class="canvas" baseChart
+          [height]="100"
+          [chartType]="chartType"
+          [datasets]="chartDatasets"
+          [labels]="chartLabels"
+          [colors]="chartColors"
+          [options]="chartOptions"
+          [legend]="true"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)">
+  </canvas>
+
+
+</div>
